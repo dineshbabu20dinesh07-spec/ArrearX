@@ -48,7 +48,7 @@ export default function Dashboard() {
         </div>
 
         <div className="max-w-3xl mx-auto relative group">
-          <form onSubmit={handleSearch} className="relative z-10 flex items-center bg-white border border-slate-200/80 rounded-2xl p-1.5 transition-all group-focus-within:border-primary/50 group-focus-within:shadow-neon shadow-md shadow-slate-100">
+          <form onSubmit={handleSearch} className="relative z-10 flex items-center bg-white border-2 border-b-4 border-slate-200 rounded-2xl p-1.5 transition-all focus-within:border-secondary shadow-sm">
             <div className="pl-6 text-slate-400">
               <Search size={20} className="group-focus-within:text-primary transition-colors" />
             </div>
@@ -57,11 +57,11 @@ export default function Dashboard() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search Subject ID or Title (e.g., CS3301)"
-              className="flex-1 bg-transparent border-none text-slate-800 px-5 py-3 outline-none text-base font-semibold placeholder-slate-400"
+              className="flex-1 bg-transparent border-none text-slate-800 px-5 py-3 outline-none text-base font-bold placeholder-slate-450"
             />
             <button 
               type="submit"
-              className="bg-primary hover:bg-secondary text-white font-bold py-3.5 px-8 rounded-xl transition-all active:scale-95 shadow-neon uppercase tracking-widest text-xs"
+              className="duo-button-3d text-white font-black py-3 px-8 rounded-xl transition-all select-none uppercase tracking-wider text-xs"
             >
               Scan Data
             </button>
@@ -72,10 +72,10 @@ export default function Dashboard() {
               <button
                 key={dept}
                 onClick={() => setSelectedDept(dept)}
-                className={`px-5 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all border
+                className={`px-5 py-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all border-2 border-b-4
                   ${selectedDept === dept 
-                    ? 'bg-primary/10 border-primary/30 text-primary shadow-[0_0_15px_rgba(37,99,235,0.15)]' 
-                    : 'bg-slate-100 border-slate-200/40 text-slate-500 hover:text-slate-900 hover:bg-slate-200'
+                    ? 'bg-primary/10 border-primary text-primary border-b-primary active:translate-y-[2px] active:border-b-2' 
+                    : 'bg-white border-slate-250 text-slate-500 hover:bg-slate-50 hover:text-slate-800 active:translate-y-[2px] active:border-b-2'
                   }`}
               >
                 {dept}
@@ -110,24 +110,24 @@ export default function Dashboard() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: idx * 0.1 }}
-                    className="glass-card p-6 flex flex-col group hover:border-primary/50 transition-all relative overflow-hidden"
-                  >
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[60px] pointer-events-none rounded-full" />
-                    
-                    <div className="flex justify-between items-start mb-6">
-                      <div className="flex items-center space-x-3">
-                        <div className="bg-primary/20 p-2.5 rounded-xl border border-primary/30">
-                          <Hash size={20} className="text-primary" />
-                        </div>
-                        <div>
-                          <span className="text-[10px] font-black uppercase tracking-widest text-primary/70">Professional Subject ID</span>
-                          <h3 className="text-xl font-black tracking-tight font-display">{subject.code}</h3>
-                        </div>
+                  className="duo-card p-6 flex flex-col group relative overflow-hidden"
+                >
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-[60px] pointer-events-none rounded-full" />
+                  
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="flex items-center space-x-3">
+                      <div className="bg-primary/10 p-2.5 rounded-xl border-2 border-b-4 border-primary/20">
+                        <Hash size={20} className="text-primary" />
                       </div>
-                      <div className="bg-emerald/10 text-emerald text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full border border-emerald/20">
-                        Regulation 2021
+                      <div>
+                        <span className="text-[10px] font-black uppercase tracking-widest text-[#777777]">Professional Subject ID</span>
+                        <h3 className="text-xl font-black tracking-tight font-display">{subject.code}</h3>
                       </div>
                     </div>
+                    <div className="bg-emerald/10 text-emerald text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full border-2 border-b-4 border-emerald/20">
+                      Regulation 2021
+                    </div>
+                  </div>
 
                     <h4 className="text-slate-800 text-base font-bold mb-6 flex-1 group-hover:text-primary transition-colors pr-8">
                       {subject.name}
@@ -136,13 +136,13 @@ export default function Dashboard() {
                     <div className="grid grid-cols-2 gap-4">
                       <a 
                         href={subject.syllabus} target="_blank" rel="noreferrer"
-                        className="flex items-center justify-center space-x-2 bg-slate-100 border border-slate-200 py-2.5 rounded-xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-primary hover:text-white hover:shadow-neon transition-all"
+                        className="flex items-center justify-center space-x-2 bg-white border-2 border-b-4 border-slate-200 hover:bg-slate-50 py-2.5 rounded-xl text-[11px] font-black uppercase tracking-wider text-slate-500 hover:text-primary transition-all active:translate-y-[2px] active:border-b-2"
                       >
                         <Download size={14} /> <span>Syllabus</span>
                       </a>
                       <a 
                         href={subject.notes} target="_blank" rel="noreferrer"
-                        className="flex items-center justify-center space-x-2 bg-slate-100 border border-slate-200 py-2.5 rounded-xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-secondary hover:text-white hover:shadow-[0_0_15px_rgba(2,132,199,0.2)] transition-all"
+                        className="flex items-center justify-center space-x-2 bg-[#1CB0F6] border-b-4 border-[#1898d4] text-white py-2.5 rounded-xl text-[11px] font-black uppercase tracking-wider transition-all hover:bg-[#24c0ff] active:translate-y-[2px] active:border-b-2 active:shadow-none"
                       >
                         <Library size={14} /> <span>Get Notes</span>
                       </a>

@@ -93,18 +93,18 @@ export default function Notes() {
           <p className="text-gray-500 font-medium">Capture high-yield insights – Auto-save & PDF Export ready.</p>
         </div>
 
-        <div className="flex bg-slate-100 p-1.5 rounded-2xl border border-slate-200">
+        <div className="flex bg-white p-1 rounded-xl border-2 border-b-4 border-slate-200">
            <button 
              onClick={() => setViewMode('grid')}
-             className={`p-2 rounded-xl transition-all ${viewMode === 'grid' ? 'bg-secondary text-white shadow-neon-pink' : 'text-slate-500 hover:text-slate-800'}`}
+             className={`p-2 rounded-lg transition-all ${viewMode === 'grid' ? 'bg-secondary text-white' : 'text-slate-500 hover:text-slate-800'}`}
            >
-             <LayoutGrid size={20} />
+             <LayoutGrid size={18} />
            </button>
            <button 
              onClick={() => setViewMode('list')}
-             className={`p-2 rounded-xl transition-all ${viewMode === 'list' ? 'bg-secondary text-white shadow-neon-pink' : 'text-slate-500 hover:text-slate-800'}`}
+             className={`p-2 rounded-lg transition-all ${viewMode === 'list' ? 'bg-secondary text-white' : 'text-slate-500 hover:text-slate-800'}`}
            >
-             <List size={20} />
+             <List size={18} />
            </button>
         </div>
       </header>
@@ -112,19 +112,19 @@ export default function Notes() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Editor Section */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="glass-card p-8 border-secondary/20 shadow-[0_0_30px_rgba(2,132,199,0.1)] relative overflow-hidden">
+          <div className="duo-card p-8 border-2 border-b-4 border-slate-200 relative overflow-hidden">
              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-[60px] pointer-events-none rounded-full" />
              
              <div className="space-y-4 mb-8">
                 <div className="relative group">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-secondary/50 group-focus-within:text-secondary transition-colors"><Hash size={16} /></span>
-                  <input 
-                    type="text" 
-                    placeholder="SUBJECT CODE (e.g. CS3301)"
-                    value={activeNote.subject}
-                    onChange={e => setActiveNote({...activeNote, subject: e.target.value.toUpperCase()})}
-                    className="w-full bg-slate-100 border border-slate-200 rounded-xl pl-12 pr-6 py-3.5 outline-none focus:border-secondary/40 text-slate-800 font-black uppercase tracking-widest text-xs transition-all"
-                  />
+                   <span className="absolute left-4 top-1/2 -translate-y-1/2 text-secondary/50 group-focus-within:text-secondary transition-colors"><Hash size={16} /></span>
+                   <input 
+                     type="text" 
+                     placeholder="SUBJECT CODE (e.g. CS3301)"
+                     value={activeNote.subject}
+                     onChange={e => setActiveNote({...activeNote, subject: e.target.value.toUpperCase()})}
+                     className="w-full bg-white border-2 border-b-4 border-slate-200 rounded-xl pl-12 pr-6 py-3.5 outline-none focus:border-secondary text-slate-800 font-black uppercase tracking-widest text-xs transition-all"
+                   />
                 </div>
                 <input 
                   type="text" 
@@ -139,13 +139,13 @@ export default function Notes() {
                placeholder="Macha, Start writing your key points here... AI Friend buddy ready to help!"
                value={activeNote.content}
                onChange={e => setActiveNote({...activeNote, content: e.target.value})}
-               className="w-full h-64 bg-slate-50 border border-slate-200 rounded-3xl p-6 outline-none focus:border-secondary/30 text-slate-700 font-medium leading-relaxed resize-none custom-scrollbar mb-6"
+               className="w-full h-64 bg-white border-2 border-b-4 border-slate-200 rounded-3xl p-6 outline-none focus:border-secondary text-slate-700 font-semibold leading-relaxed resize-none custom-scrollbar mb-6"
              />
 
              <button 
                onClick={handleSave}
                disabled={!activeNote.content.trim() || isSaving}
-               className="w-full relative overflow-hidden bg-secondary px-6 py-4 rounded-xl font-bold text-white shadow-[0_0_20px_rgba(2,132,199,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:grayscale"
+               className="w-full relative overflow-hidden bg-secondary border-b-4 border-[#1898d4] py-4 rounded-xl font-black text-white hover:bg-[#24c0ff] transition-all select-none active:translate-y-[2px] active:border-b-2 active:shadow-none disabled:opacity-50"
              >
                 <span className="flex items-center justify-center gap-3">
                    {isSaving ? <Loader className="animate-spin" /> : <Save size={20} />}
@@ -168,29 +168,34 @@ export default function Notes() {
         <div className="lg:col-span-7">
            <AnimatePresence mode="popLayout">
              {notes.length === 0 ? (
-               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card h-80 flex flex-col items-center justify-center grayscale opacity-30 cyber-grid">
-                  <FileText size={60} className="text-slate-400 mb-4" />
-                  <p className="font-black uppercase tracking-widest text-[10px]">Vault is currently empty</p>
-               </motion.div>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="duo-card h-[340px] flex flex-col items-center justify-center p-6 bg-white border-2 border-b-4 border-slate-200">
+                   <img 
+                     src="file:///C:/Users/MI/.gemini/antigravity-ide/brain/44bc34ac-52c6-45d2-a6df-baa988347a90/duo_studying_1781003495394.png" 
+                     alt="Studying Mascot" 
+                     className="w-40 h-40 object-contain mb-4 rounded-xl"
+                   />
+                   <p className="font-black uppercase tracking-wider text-xs text-slate-400">Your notes vault is currently empty!</p>
+                   <p className="text-slate-400 text-xs font-semibold mt-1">Start writing notes on the left to capture knowledge.</p>
+                </motion.div>
              ) : (
                <motion.div 
                  layout
                  className={viewMode === 'grid' ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "space-y-4"}
                >
                  {notes.map((note, idx) => (
-                   <motion.div 
-                     layout
-                     key={note.id}
-                     initial={{ opacity: 0, scale: 0.95 }}
-                     animate={{ opacity: 1, scale: 1 }}
-                     transition={{ delay: idx * 0.05 }}
-                     className="glass-card p-6 flex flex-col group hover:border-secondary/40 transition-all border-slate-200/60 relative"
-                   >
-                     <div className="flex justify-between items-start mb-6">
-                        <div className="flex items-center gap-3">
-                           <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center border border-secondary/20 group-hover:shadow-[0_0_20px_rgba(2,132,199,0.2)] transition-all">
-                              <PenTool size={18} className="text-secondary" />
-                           </div>
+                    <motion.div 
+                      layout
+                      key={note.id}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: idx * 0.05 }}
+                      className="duo-card p-6 flex flex-col group relative"
+                    >
+                      <div className="flex justify-between items-start mb-6">
+                         <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center border-2 border-b-4 border-secondary/20">
+                               <PenTool size={18} className="text-secondary" />
+                            </div>
                            <div>
                               <span className="text-[10px] font-black uppercase tracking-widest text-secondary/60">{note.subject || 'No Subject'}</span>
                               <h4 className="text-lg font-black tracking-tight group-hover:text-secondary transition-colors">{note.title || 'Untitled Archive'}</h4>

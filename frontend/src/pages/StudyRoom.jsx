@@ -107,7 +107,7 @@ export default function StudyRoom() {
                     className="flex-1 flex flex-col gap-6 overflow-hidden"
                   >
                     {/* Search Bar HUD */}
-                    <div className="glass-card-advanced p-4 border-slate-200 bg-slate-50 shrink-0">
+                    <div className="duo-card p-4 bg-white border-2 border-b-4 border-slate-200 shrink-0">
                       <div className="flex gap-4">
                         <div className="flex-1 relative group">
                           <input 
@@ -116,12 +116,12 @@ export default function StudyRoom() {
                             onChange={(e) => setSearchTopic(e.target.value)}
                             onKeyDown={e => e.key === 'Enter' && searchAndEmbed()}
                             placeholder="Search topics to study... (e.g. Data Structures)"
-                            className="w-full bg-white border border-slate-200/80 rounded-xl px-5 py-3.5 outline-none focus:border-primary/50 text-slate-800 font-bold transition-all text-sm group-hover:bg-slate-50 shadow-inner"
+                            className="w-full bg-white border-2 border-b-4 border-slate-200 rounded-xl px-5 py-3 outline-none focus:border-secondary transition-all text-sm font-bold"
                           />
                           <button 
                             onClick={() => searchAndEmbed()}
                             disabled={isSearching}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary p-2.5 rounded-lg hover:scale-105 transition-all shadow-neon disabled:opacity-50"
+                            className="absolute right-2 top-1/2 -translate-y-1/2 duo-button-3d p-2 rounded-xl transition-all disabled:opacity-50"
                           >
                             {isSearching ? <Loader2 className="animate-spin text-white" size={18} /> : <Search size={18} className="text-white" />}
                           </button>
@@ -130,7 +130,7 @@ export default function StudyRoom() {
                     </div>
 
                     {/* Full Grid Results */}
-                    <div className="flex-1 glass-card-advanced p-6 border-slate-200/60 bg-white overflow-hidden flex flex-col shadow-inner">
+                    <div className="flex-1 bg-white border-2 border-b-4 border-slate-200 rounded-3xl p-6 overflow-hidden flex flex-col shadow-sm">
                       <div className="flex items-center justify-between mb-4 border-b border-slate-200 pb-4">
                          <h5 className="text-[10px] font-display font-black uppercase tracking-widest text-slate-500 flex items-center gap-2">
                            <MonitorPlay size={14} className="text-primary" /> Available Lessons
@@ -147,10 +147,10 @@ export default function StudyRoom() {
                           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {searchResults.map((video, idx) => (
                               <motion.button 
-                                whileHover={{ scale: 1.02, y: -5 }}
+                                whileHover={{ scale: 1.01, y: -2 }}
                                 key={idx}
                                 onClick={() => setActiveVideoId(video.id)}
-                                className="group relative flex flex-col rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 hover:border-primary/30 hover:bg-white transition-all text-left shadow-sm"
+                                className="group relative flex flex-col rounded-2xl overflow-hidden border-2 border-b-4 border-slate-200 bg-white hover:bg-slate-50 active:translate-y-[2px] active:border-b-2 transition-all text-left shadow-sm"
                               >
                                 <div className="relative aspect-video w-full overflow-hidden">
                                   <img src={video.thumbnail} alt="thumb" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500" />
@@ -234,14 +234,14 @@ export default function StudyRoom() {
 
             {/* Right Col: Advanced AI HUD Sidebar */}
             <div className="w-full xl:w-[420px] flex flex-col gap-6 shrink-0 h-full">
-              <div className="glass-card-advanced flex-1 flex flex-col overflow-hidden border-slate-200 bg-white relative group shadow-lg">
+            <div className="duo-card flex-1 flex flex-col overflow-hidden border-2 border-b-4 border-slate-200 bg-white relative group shadow-sm">
                 {/* HUD Header */}
                 <div className="p-6 bg-gradient-to-br from-primary/5 via-transparent to-transparent border-b border-slate-200 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-[50px] -mr-16 -mt-16 animate-pulse"></div>
                   <div className="flex items-center justify-between relative z-10">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center border border-primary/30 shadow-neon">
-                        <Bot className="text-primary" size={24} />
+                      <div className="w-12 h-12 bg-white border-2 border-b-4 border-slate-200 rounded-2xl flex items-center justify-center overflow-hidden">
+                        <img src="file:///C:/Users/MI/.gemini/antigravity-ide/brain/44bc34ac-52c6-45d2-a6df-baa988347a90/duo_studying_1781003495394.png" alt="Mascot Avatar" className="w-10 h-10 object-contain rounded-full" />
                       </div>
                       <div>
                         <h4 className="font-display font-black tracking-tight text-slate-900 group-hover:text-primary transition-colors text-lg">ALLCLEAR AI</h4>
@@ -272,8 +272,8 @@ export default function StudyRoom() {
                       >
                         <div className={`max-w-[85%] py-3 px-4 rounded-2xl text-[13px] font-medium leading-relaxed relative group/msg
                           ${m.role === 'user' 
-                            ? 'bg-primary text-white rounded-br-none shadow-neon' 
-                            : 'bg-white border border-slate-200 text-slate-800 rounded-bl-none shadow-sm'
+                            ? 'bg-primary text-white rounded-br-none shadow-[0_3px_0_#3b8e01]' 
+                            : 'bg-white border-2 border-b-4 border-slate-200 text-slate-800 rounded-bl-none shadow-sm'
                           }`}
                         >
                           {m.content}
@@ -297,7 +297,7 @@ export default function StudyRoom() {
 
                 {/* HUD Input Bar */}
                 <div className="p-6 bg-slate-50 border-t border-slate-200">
-                  <div className="flex items-center bg-white border border-slate-200 rounded-xl focus-within:border-primary/50 transition-all p-1 shadow-md shadow-slate-100">
+                  <div className="flex items-center bg-white border-2 border-b-4 border-slate-200 rounded-xl focus-within:border-secondary transition-all p-1 shadow-sm">
                     <input 
                       type="text" 
                       value={input}
@@ -309,7 +309,7 @@ export default function StudyRoom() {
                     <button 
                       onClick={sendMessage}
                       disabled={!input.trim()}
-                      className="bg-primary hover:bg-secondary disabled:bg-gray-200 p-2.5 rounded-lg text-white transition-all transform active:scale-95 flex items-center justify-center shadow-neon"
+                      className="duo-button-3d p-2 rounded-xl text-white transition-all disabled:opacity-50 flex items-center justify-center shadow-none"
                     >
                       <Send size={18} />
                     </button>

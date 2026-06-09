@@ -28,12 +28,20 @@ function App() {
             </div>
             
             <div className="flex items-center space-x-4">
-              <button className="hidden md:flex items-center space-x-2 bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-sm font-medium hover:bg-slate-200 transition-all group text-slate-700">
-                <Settings size={16} className="text-slate-500 group-hover:rotate-45 transition-transform" />
+              {/* Gamification Stats */}
+              <div className="flex items-center space-x-3 bg-white border-2 border-b-4 border-slate-200 rounded-2xl px-4 py-1.5 text-sm font-black select-none">
+                <span className="flex items-center text-[#ff9600]"><span className="mr-1">🔥</span> 3 Days</span>
+                <span className="text-slate-300">|</span>
+                <span className="flex items-center text-[#1cb0f6]"><span className="mr-1">⚡</span> 350 XP</span>
+              </div>
+              
+              <button className="hidden md:flex items-center space-x-2 bg-white border-2 border-b-4 border-slate-200 px-4 py-2 rounded-xl text-sm font-medium hover:bg-slate-50 transition-all active:translate-y-[2px] active:border-b-2 text-slate-700">
+                <Settings size={16} className="text-slate-550" />
                 <span>Config</span>
               </button>
-              <div className="w-10 h-10 rounded-full border-2 border-primary/40 p-0.5 shadow-neon">
-                <div className="w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+              
+              <div className="w-10 h-10 rounded-full border-2 border-primary/40 p-0.5">
+                <div className="w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white">
                   <User size={18} />
                 </div>
               </div>
@@ -90,21 +98,21 @@ function SidebarMain() {
           <div key={path} className="relative group">
             <button
               onClick={() => navigate(path)}
-              className={`relative flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-300
+              className={`relative flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-100
                 ${isActive(path)
-                  ? 'text-primary bg-primary/10 shadow-[0_0_20px_rgba(37,99,235,0.15)] border border-primary/20 scale-110'
-                  : 'text-slate-400 hover:text-primary hover:bg-slate-100'
+                  ? 'text-white bg-primary border-b-4 border-[#3b8e01] scale-105 active:translate-y-[2px] active:border-b-2'
+                  : 'text-slate-400 hover:text-primary hover:bg-slate-50'
                 }`}
             >
               <Icon size={22} strokeWidth={isActive(path) ? 2.5 : 2} />
               {isActive(path) && (
                 <motion.span 
                   layoutId="activeIndicator"
-                  className="absolute -left-3 top-1/2 -translate-y-1/2 w-1.5 h-8 bg-primary rounded-full hidden md:block shadow-[0_0_15px_rgba(37,99,235,0.6)]" 
+                  className="absolute -left-3 top-1/2 -translate-y-1/2 w-1.5 h-6 bg-primary rounded-full hidden md:block" 
                 />
               )}
             </button>
-            <span className="absolute left-16 top-1/2 -translate-y-1/2 bg-primary px-3 py-1.5 rounded-lg text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-all scale-75 group-hover:scale-100 whitespace-nowrap shadow-neon uppercase tracking-tighter z-50">
+            <span className="absolute left-16 top-1/2 -translate-y-1/2 bg-primary border-b-4 border-[#3b8e01] px-3 py-1.5 rounded-xl text-[10px] font-black text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-all scale-75 group-hover:scale-100 whitespace-nowrap uppercase tracking-wider z-50">
               {label}
             </span>
           </div>
