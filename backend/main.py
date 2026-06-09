@@ -385,10 +385,18 @@ async def get_subject_by_code(code: str):
         if s["code"] == code_upper: return s
     return {"error": "Subject not found"}
 
+# In-memory cache for YouTube searches to improve performance
+YT_CACHE = {}
+
 @app.get("/api/yt")
 async def search_youtube_videos(q: str = "engineering"):
     import asyncio
     
+    cache_key = q.strip().lower()
+    if cache_key in YT_CACHE:
+        print(f"[YT CACHE] Hit for query: '{cache_key}'")
+        return {"results": YT_CACHE[cache_key]}
+        
     query = q + " engineering tamil Anna University"
     try:
         def fetch_yt():
@@ -423,6 +431,11 @@ async def search_youtube_videos(q: str = "engineering"):
         videos = await asyncio.to_thread(fetch_yt)
         
         print(f"[YT] Found {len(videos)} videos for query: {q}")
+        
+        # Save to cache
+        if videos:
+            YT_CACHE[cache_key] = videos[:20]
+            
         return {"results": videos[:20]}
     except Exception as e:
         import traceback
