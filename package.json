@@ -1,0 +1,12 @@
+{
+  "name": "kingmaker",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "start-backend": "cd backend && C:\\Users\\MI\\AppData\\Local\\Programs\\Python\\Python314\\python.exe -m uvicorn main:app --reload",
+    "start-all": "concurrently \"npm run dev\" \"npm run start-backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

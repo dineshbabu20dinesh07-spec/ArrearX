@@ -1,0 +1,36 @@
+# Node dependencies and builds
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python caches and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Sensitive configurations (API keys)
+.env
+backend/.env
+frontend/.env
+*.env.local
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS Files
+.DS_Store
+Thumbs.db

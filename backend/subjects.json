@@ -1,0 +1,402 @@
+[
+  {
+    "code": "HS3151",
+    "name": "Professional English I",
+    "dept": "Common",
+    "sem": 1,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=HS3151+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=HS3151+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=HS3151+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "MA3151",
+    "name": "Matrices and Calculus",
+    "dept": "Common",
+    "sem": 1,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=MA3151+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=MA3151+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=MA3151+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "PH3151",
+    "name": "Engineering Physics",
+    "dept": "Common",
+    "sem": 1,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=PH3151+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=PH3151+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=PH3151+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CY3151",
+    "name": "Engineering Chemistry",
+    "dept": "Common",
+    "sem": 1,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CY3151+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CY3151+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CY3151+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "GE3151",
+    "name": "Problem Solving and Python Programming",
+    "dept": "Common",
+    "sem": 1,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=GE3151+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=GE3151+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=GE3151+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "GE3152",
+    "name": "Tamil Heritage",
+    "dept": "Common",
+    "sem": 1,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=GE3152+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=GE3152+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=GE3152+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "HS3251",
+    "name": "Professional English II",
+    "dept": "Common",
+    "sem": 2,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=HS3251+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=HS3251+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=HS3251+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "MA3251",
+    "name": "Statistics and Numerical Methods",
+    "dept": "Common",
+    "sem": 2,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=MA3251+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=MA3251+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=MA3251+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "PH3256",
+    "name": "Physics for Information Science",
+    "dept": "CSE/IT",
+    "sem": 2,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=PH3256+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=PH3256+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=PH3256+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "BE3251",
+    "name": "Basic Electrical and Electronics Engineering",
+    "dept": "Common",
+    "sem": 2,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=BE3251+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=BE3251+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=BE3251+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "GE3251",
+    "name": "Engineering Graphics",
+    "dept": "Common",
+    "sem": 2,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=GE3251+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=GE3251+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=GE3251+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "GE3252",
+    "name": "Tamils and Technology",
+    "dept": "Common",
+    "sem": 2,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=GE3252+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=GE3252+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=GE3252+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3301",
+    "name": "Data Structures",
+    "dept": "CSE",
+    "sem": 3,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3301+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3301+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3301+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3351",
+    "name": "Digital Principles and Computer Organization",
+    "dept": "CSE",
+    "sem": 3,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3351+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3351+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3351+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3352",
+    "name": "Foundations of Data Science",
+    "dept": "CSE",
+    "sem": 3,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3352+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3352+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3352+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3391",
+    "name": "Object Oriented Programming",
+    "dept": "CSE",
+    "sem": 3,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3391+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3391+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3391+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3401",
+    "name": "Algorithms",
+    "dept": "CSE",
+    "sem": 4,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3401+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3401+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3401+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3451",
+    "name": "Introduction to Operating Systems",
+    "dept": "CSE",
+    "sem": 4,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3451+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3451+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3451+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3491",
+    "name": "Theory of Computation",
+    "dept": "CSE",
+    "sem": 4,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3491+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3491+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3491+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3492",
+    "name": "Database Management Systems",
+    "dept": "CSE",
+    "sem": 4,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3492+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3492+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3492+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3591",
+    "name": "Computer Networks",
+    "dept": "CSE",
+    "sem": 5,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3591+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3591+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3591+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS3501",
+    "name": "Compiler Design",
+    "dept": "CSE",
+    "sem": 5,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=CS3501+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=CS3501+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS3501+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "MA8151",
+    "name": "Engineering Mathematics - I",
+    "dept": "Common",
+    "sem": 1,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=MA8151+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=MA8151+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=MA8151+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "PH8151",
+    "name": "Engineering Physics",
+    "dept": "Common",
+    "sem": 1,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=PH8151+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=PH8151+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=PH8151+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "GE8151",
+    "name": "Problem Solving and Python Programming",
+    "dept": "Common",
+    "sem": 1,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=GE8151+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=GE8151+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=GE8151+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS8351",
+    "name": "Digital Principles and System Design",
+    "dept": "CSE",
+    "sem": 3,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=CS8351+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=CS8351+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS8351+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS8391",
+    "name": "Data Structures",
+    "dept": "IT",
+    "sem": 3,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=CS8391+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=CS8391+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS8391+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS8392",
+    "name": "Object Oriented Programming",
+    "dept": "CSE",
+    "sem": 3,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=CS8392+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=CS8392+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS8392+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS8491",
+    "name": "Computer Architecture",
+    "dept": "CSE",
+    "sem": 4,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=CS8491+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=CS8491+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS8491+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS8492",
+    "name": "Database Management Systems",
+    "dept": "CSE",
+    "sem": 4,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=CS8492+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=CS8492+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS8492+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS8493",
+    "name": "Operating Systems",
+    "dept": "CSE",
+    "sem": 4,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=CS8493+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=CS8493+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS8493+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "CS8494",
+    "name": "Software Engineering",
+    "dept": "CSE",
+    "sem": 4,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=CS8494+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=CS8494+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=CS8494+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "IT3301",
+    "name": "Data Structures",
+    "dept": "IT",
+    "sem": 3,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=IT3301+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=IT3301+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=IT3301+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "IT3401",
+    "name": "Web Essentials",
+    "dept": "IT",
+    "sem": 4,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=IT3401+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=IT3401+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=IT3401+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "EC3351",
+    "name": "Control Systems",
+    "dept": "ECE",
+    "sem": 3,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=EC3351+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=EC3351+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=EC3351+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "EC3354",
+    "name": "Signals and Systems",
+    "dept": "ECE",
+    "sem": 3,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=EC3354+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=EC3354+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=EC3354+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "EC8351",
+    "name": "Electronic Circuits - I",
+    "dept": "ECE",
+    "sem": 3,
+    "reg": 2018,
+    "syllabus": "https://www.google.com/search?q=EC8351+syllabus+pdf+anna+university+regulation+2018",
+    "notes": "https://www.google.com/search?q=EC8351+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=EC8351+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "AD3301",
+    "name": "Data Design and Management",
+    "dept": "AI-DS",
+    "sem": 3,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=AD3301+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=AD3301+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=AD3301+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "AD3391",
+    "name": "Database Design and Management",
+    "dept": "AI-DS",
+    "sem": 3,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=AD3391+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=AD3391+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=AD3391+previous+year+question+paper+pdf+anna+university"
+  },
+  {
+    "code": "AD3491",
+    "name": "Fundamentals of Data Science",
+    "dept": "AI-DS",
+    "sem": 4,
+    "reg": 2021,
+    "syllabus": "https://www.google.com/search?q=AD3491+syllabus+pdf+anna+university+regulation+2021",
+    "notes": "https://www.google.com/search?q=AD3491+notes+pdf+anna+university",
+    "qps": "https://www.google.com/search?q=AD3491+previous+year+question+paper+pdf+anna+university"
+  }
+]
