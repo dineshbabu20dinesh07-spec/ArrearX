@@ -112,7 +112,7 @@ export default function Notes() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Editor Section */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="glass-card p-8 border-secondary/20 shadow-[0_0_30px_rgba(217,70,239,0.1)] relative overflow-hidden">
+          <div className="glass-card p-8 border-secondary/20 shadow-[0_0_30px_rgba(2,132,199,0.1)] relative overflow-hidden">
              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-[60px] pointer-events-none rounded-full" />
              
              <div className="space-y-4 mb-8">
@@ -123,7 +123,7 @@ export default function Notes() {
                     placeholder="SUBJECT CODE (e.g. CS3301)"
                     value={activeNote.subject}
                     onChange={e => setActiveNote({...activeNote, subject: e.target.value.toUpperCase()})}
-                    className="w-full bg-slate-100 border border-slate-200 rounded-2xl pl-12 pr-6 py-4 outline-none focus:border-secondary/40 text-slate-800 font-black uppercase tracking-widest text-xs transition-all"
+                    className="w-full bg-slate-100 border border-slate-200 rounded-xl pl-12 pr-6 py-3.5 outline-none focus:border-secondary/40 text-slate-800 font-black uppercase tracking-widest text-xs transition-all"
                   />
                 </div>
                 <input 
@@ -145,7 +145,7 @@ export default function Notes() {
              <button 
                onClick={handleSave}
                disabled={!activeNote.content.trim() || isSaving}
-               className="w-full relative overflow-hidden bg-secondary px-6 py-5 rounded-2xl font-bold text-white shadow-[0_0_20px_rgba(217,70,239,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:grayscale"
+               className="w-full relative overflow-hidden bg-secondary px-6 py-4 rounded-xl font-bold text-white shadow-[0_0_20px_rgba(2,132,199,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:grayscale"
              >
                 <span className="flex items-center justify-center gap-3">
                    {isSaving ? <Loader className="animate-spin" /> : <Save size={20} />}
@@ -188,7 +188,7 @@ export default function Notes() {
                    >
                      <div className="flex justify-between items-start mb-6">
                         <div className="flex items-center gap-3">
-                           <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center border border-secondary/20 group-hover:shadow-[0_0_20px_rgba(217,70,239,0.2)] transition-all">
+                           <div className="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center border border-secondary/20 group-hover:shadow-[0_0_20px_rgba(2,132,199,0.2)] transition-all">
                               <PenTool size={18} className="text-secondary" />
                            </div>
                            <div>

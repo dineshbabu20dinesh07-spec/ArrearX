@@ -35,10 +35,10 @@ export default function Landing() {
           </span>
         </h1>
         
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <button 
             onClick={() => navigate('/dashboard')}
-            className="neon-button min-w-[240px] text-xl py-5 group shadow-[0_0_40px_rgba(249,115,22,0.35)]"
+            className="neon-button min-w-[210px] text-base py-4 px-8 rounded-xl group shadow-[0_0_35px_rgba(37,99,235,0.25)]"
           >
             <span className="flex items-center justify-center gap-3">
               INITIALIZE STUDY <ArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -46,7 +46,7 @@ export default function Landing() {
           </button>
           
           <button 
-            className="px-10 py-5 rounded-2xl glass-card border-slate-200/80 hover:border-primary/40 transition-all font-bold uppercase tracking-widest text-sm hover:bg-primary/5 flex items-center gap-3 group text-slate-700"
+            className="px-8 py-4 rounded-xl glass-card border-slate-200/80 hover:border-primary/40 transition-all font-bold uppercase tracking-widest text-xs hover:bg-primary/5 flex items-center gap-3 group text-slate-700"
           >
             <Binary size={18} className="text-primary group-hover:rotate-180 transition-transform duration-500" />
             Access Database
@@ -56,42 +56,42 @@ export default function Landing() {
 
       {/* Feature Grids */}
       <motion.div 
-        className="mt-28 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full"
+        className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl w-full"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        <div className="glass-card p-10 group hover:border-primary/50 transition-all hover:bg-primary/5 relative overflow-hidden">
+        <div className="glass-card p-8 group hover:border-primary/50 transition-all hover:bg-primary/5 relative overflow-hidden">
           <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
             <Rocket size={80} />
           </div>
-          <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 border border-primary/20 shadow-neon">
-            <Zap className="text-primary" size={30} fill="currentColor" />
+          <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 border border-primary/20 shadow-neon">
+            <Zap className="text-primary" size={24} fill="currentColor" />
           </div>
-          <h3 className="text-2xl font-black mb-3 tracking-tight">Instant Subject Hub</h3>
-          <p className="text-slate-500 font-medium leading-relaxed">Integrated Subject Database. Get Syllabus & Notes in <span className="text-slate-800 font-bold">0.2 seconds.</span></p>
+          <h3 className="text-xl font-black mb-3 tracking-tight">Instant Subject Hub</h3>
+          <p className="text-sm text-slate-500 font-medium leading-relaxed">Integrated Subject Database. Get Syllabus & Notes in <span className="text-slate-800 font-bold">0.2 seconds.</span></p>
         </div>
 
-        <div className="glass-card p-10 group hover:border-secondary/50 transition-all hover:bg-secondary/5 relative overflow-hidden border-t-4 border-t-secondary">
+        <div className="glass-card p-8 group hover:border-secondary/50 transition-all hover:bg-secondary/5 relative overflow-hidden border-t-4 border-t-secondary">
           <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
             <Binary size={80} />
           </div>
-          <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 border border-secondary/20 shadow-[0_0_20px_rgba(245,158,11,0.25)]">
-            <Sparkles className="text-secondary" size={30} fill="currentColor" />
+          <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 border border-secondary/20 shadow-[0_0_20px_rgba(2,132,199,0.2)]">
+            <Sparkles className="text-secondary" size={24} fill="currentColor" />
           </div>
-          <h3 className="text-2xl font-black mb-3 tracking-tight">AI Buddy Mode</h3>
-          <p className="text-slate-500 font-medium leading-relaxed">No judgmental bots here. Talk to your college AI buddy in <span className="text-slate-800 font-bold">Tamil-English slang.</span></p>
+          <h3 className="text-xl font-black mb-3 tracking-tight">AI Buddy Mode</h3>
+          <p className="text-sm text-slate-500 font-medium leading-relaxed">No judgmental bots here. Talk to your college AI buddy in <span className="text-slate-800 font-bold">Tamil-English slang.</span></p>
         </div>
 
-        <div className="glass-card p-10 group hover:border-cyan/50 transition-all hover:bg-cyan/5 relative overflow-hidden">
+        <div className="glass-card p-8 group hover:border-cyan/50 transition-all hover:bg-cyan/5 relative overflow-hidden">
           <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
             <ShieldCheck size={80} />
           </div>
-          <div className="w-14 h-14 bg-cyan/10 rounded-2xl flex items-center justify-center mb-6 border border-cyan/20 shadow-neon-cyan">
-            <ShieldCheck className="text-cyan" size={30} fill="currentColor" />
+          <div className="w-12 h-12 bg-cyan/10 rounded-xl flex items-center justify-center mb-6 border border-cyan/20 shadow-neon-cyan">
+            <ShieldCheck className="text-cyan" size={24} fill="currentColor" />
           </div>
-          <h3 className="text-2xl font-black mb-3 tracking-tight">Verified Data</h3>
-          <p className="text-slate-500 font-medium leading-relaxed">Official Regulation 2021 curriculum for all <span className="text-slate-800 font-bold">Professional Departments.</span></p>
+          <h3 className="text-xl font-black mb-3 tracking-tight">Verified Data</h3>
+          <p className="text-sm text-slate-500 font-medium leading-relaxed">Official Regulation 2021 curriculum for all <span className="text-slate-800 font-bold">Professional Departments.</span></p>
         </div>
       </motion.div>
     </div>

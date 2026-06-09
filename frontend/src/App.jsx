@@ -13,12 +13,12 @@ import SyllabusAnalyzer from './pages/SyllabusAnalyzer';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#fafafa] text-slate-800 font-sans selection:bg-primary/20 selection:text-primary pb-20 md:pb-0 md:pl-28 cyber-grid">
+      <div className="min-h-screen bg-[#fafafa] text-slate-800 font-sans selection:bg-primary/20 selection:text-primary pb-20 md:pb-0 md:pl-24 cyber-grid">
         <SidebarMain />
         <div className="max-w-7xl mx-auto px-6 py-10">
           <header className="flex justify-between items-center mb-10">
             <div className="flex items-center space-x-3 group cursor-pointer">
-              <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20 group-hover:border-primary/40 transition-all shadow-neon group-hover:shadow-[0_0_20px_rgba(249,115,22,0.2)]">
+              <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20 group-hover:border-primary/40 transition-all shadow-neon group-hover:shadow-[0_0_20px_rgba(37,99,235,0.2)]">
                 <Sparkles className="text-primary w-5 h-5 animate-pulse" />
               </div>
               <div>
@@ -77,7 +77,7 @@ function SidebarMain() {
   ];
 
   return (
-    <nav className="fixed bottom-0 w-full md:w-24 md:h-screen md:left-0 bg-white/95 backdrop-blur-3xl border-t md:border-t-0 md:border-r border-slate-200/60 flex md:flex-col justify-around md:justify-center items-center py-4 md:py-0 z-[100] shadow-[5px_0_30px_rgba(0,0,0,0.03)]">
+    <nav className="fixed bottom-0 w-full md:w-20 md:h-screen md:left-0 bg-white/95 backdrop-blur-3xl border-t md:border-t-0 md:border-r border-slate-200/60 flex md:flex-col justify-around md:justify-center items-center py-4 md:py-0 z-[100] shadow-[5px_0_30px_rgba(0,0,0,0.03)]">
       <div
         onClick={() => navigate('/')}
         className="md:absolute md:top-8 text-primary font-black text-3xl hidden md:block cursor-pointer select-none tracking-tighter font-display group"
@@ -85,26 +85,26 @@ function SidebarMain() {
         <span className="text-glow group-hover:text-slate-900 transition-colors">AC</span><span className="animate-pulse text-primary">.</span>
       </div>
 
-      <div className="flex md:flex-col space-x-6 md:space-x-0 md:space-y-10">
+      <div className="flex md:flex-col space-x-6 md:space-x-0 md:space-y-8">
         {navItems.map(({ path, icon: Icon, label }) => (
           <div key={path} className="relative group">
             <button
               onClick={() => navigate(path)}
-              className={`relative flex items-center justify-center w-14 h-14 rounded-2xl transition-all duration-300
+              className={`relative flex items-center justify-center w-12 h-12 rounded-xl transition-all duration-300
                 ${isActive(path)
-                  ? 'text-primary bg-primary/10 shadow-[0_0_20px_rgba(249,115,22,0.15)] border border-primary/20 scale-110'
+                  ? 'text-primary bg-primary/10 shadow-[0_0_20px_rgba(37,99,235,0.15)] border border-primary/20 scale-110'
                   : 'text-slate-400 hover:text-primary hover:bg-slate-100'
                 }`}
             >
-              <Icon size={26} strokeWidth={isActive(path) ? 2.5 : 2} />
+              <Icon size={22} strokeWidth={isActive(path) ? 2.5 : 2} />
               {isActive(path) && (
                 <motion.span 
                   layoutId="activeIndicator"
-                  className="absolute -left-3 top-1/2 -translate-y-1/2 w-1.5 h-10 bg-primary rounded-full hidden md:block shadow-[0_0_15px_rgba(249,115,22,0.6)]" 
+                  className="absolute -left-3 top-1/2 -translate-y-1/2 w-1.5 h-8 bg-primary rounded-full hidden md:block shadow-[0_0_15px_rgba(37,99,235,0.6)]" 
                 />
               )}
             </button>
-            <span className="absolute left-20 top-1/2 -translate-y-1/2 bg-primary px-3 py-1.5 rounded-lg text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-all scale-75 group-hover:scale-100 whitespace-nowrap shadow-neon uppercase tracking-tighter z-50">
+            <span className="absolute left-16 top-1/2 -translate-y-1/2 bg-primary px-3 py-1.5 rounded-lg text-[10px] font-bold text-white opacity-0 group-hover:opacity-100 pointer-events-none transition-all scale-75 group-hover:scale-100 whitespace-nowrap shadow-neon uppercase tracking-tighter z-50">
               {label}
             </span>
           </div>

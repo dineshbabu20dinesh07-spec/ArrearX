@@ -116,14 +116,14 @@ export default function StudyRoom() {
                             onChange={(e) => setSearchTopic(e.target.value)}
                             onKeyDown={e => e.key === 'Enter' && searchAndEmbed()}
                             placeholder="Search topics to study... (e.g. Data Structures)"
-                            className="w-full bg-white border border-slate-200/80 rounded-2xl px-6 py-4 outline-none focus:border-primary/50 text-slate-800 font-bold transition-all text-sm group-hover:bg-slate-50 shadow-inner"
+                            className="w-full bg-white border border-slate-200/80 rounded-xl px-5 py-3.5 outline-none focus:border-primary/50 text-slate-800 font-bold transition-all text-sm group-hover:bg-slate-50 shadow-inner"
                           />
                           <button 
                             onClick={() => searchAndEmbed()}
                             disabled={isSearching}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary p-3 rounded-xl hover:scale-105 transition-all shadow-neon disabled:opacity-50"
+                            className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary p-2.5 rounded-lg hover:scale-105 transition-all shadow-neon disabled:opacity-50"
                           >
-                            {isSearching ? <Loader2 className="animate-spin text-white" size={20} /> : <Search size={20} className="text-white" />}
+                            {isSearching ? <Loader2 className="animate-spin text-white" size={18} /> : <Search size={18} className="text-white" />}
                           </button>
                         </div>
                       </div>
@@ -150,7 +150,7 @@ export default function StudyRoom() {
                                 whileHover={{ scale: 1.02, y: -5 }}
                                 key={idx}
                                 onClick={() => setActiveVideoId(video.id)}
-                                className="group relative flex flex-col rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 hover:border-primary/30 hover:bg-white transition-all text-left shadow-sm"
+                                className="group relative flex flex-col rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 hover:border-primary/30 hover:bg-white transition-all text-left shadow-sm"
                               >
                                 <div className="relative aspect-video w-full overflow-hidden">
                                   <img src={video.thumbnail} alt="thumb" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500" />
@@ -270,7 +270,7 @@ export default function StudyRoom() {
                         key={i} 
                         className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
                       >
-                        <div className={`max-w-[85%] p-4 rounded-[1.5rem] text-[13px] font-medium leading-relaxed relative group/msg
+                        <div className={`max-w-[85%] py-3 px-4 rounded-2xl text-[13px] font-medium leading-relaxed relative group/msg
                           ${m.role === 'user' 
                             ? 'bg-primary text-white rounded-br-none shadow-neon' 
                             : 'bg-white border border-slate-200 text-slate-800 rounded-bl-none shadow-sm'
@@ -297,21 +297,21 @@ export default function StudyRoom() {
 
                 {/* HUD Input Bar */}
                 <div className="p-6 bg-slate-50 border-t border-slate-200">
-                  <div className="flex items-center bg-white border border-slate-200 rounded-2xl focus-within:border-primary/50 transition-all p-1.5 shadow-md shadow-slate-100">
+                  <div className="flex items-center bg-white border border-slate-200 rounded-xl focus-within:border-primary/50 transition-all p-1 shadow-md shadow-slate-100">
                     <input 
                       type="text" 
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
                       placeholder="Input Request to AllClear AI..." 
-                      className="flex-1 bg-transparent border-none text-slate-800 px-5 py-3 outline-none placeholder-slate-400 text-sm font-bold font-sans"
+                      className="flex-1 bg-transparent border-none text-slate-800 px-4 py-2.5 outline-none placeholder-slate-400 text-sm font-bold font-sans"
                     />
                     <button 
                       onClick={sendMessage}
                       disabled={!input.trim()}
-                      className="bg-primary hover:bg-secondary disabled:bg-gray-200 p-3 rounded-xl text-white transition-all transform active:scale-95 flex items-center justify-center shadow-neon"
+                      className="bg-primary hover:bg-secondary disabled:bg-gray-200 p-2.5 rounded-lg text-white transition-all transform active:scale-95 flex items-center justify-center shadow-neon"
                     >
-                      <Send size={20} />
+                      <Send size={18} />
                     </button>
                   </div>
                 </div>

@@ -57,7 +57,7 @@ export default function SyllabusAnalyzer() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass-card p-8 border-2 border-dashed border-slate-300 hover:border-primary/40 transition-all group relative overflow-hidden"
+            className="glass-card p-6 border-2 border-dashed border-slate-300 hover:border-primary/40 transition-all group relative overflow-hidden"
           >
             <input 
               type="file" 
@@ -66,19 +66,19 @@ export default function SyllabusAnalyzer() {
               className="absolute inset-0 opacity-0 cursor-pointer z-10"
             />
             
-            <div className="flex flex-col items-center text-center py-10">
-              <div className="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center mb-6 border border-primary/20 group-hover:shadow-neon transition-all">
-                {image ? <CheckCircle className="text-emerald" size={40} /> : <Upload className="text-primary" size={40} />}
+            <div className="flex flex-col items-center text-center py-6">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 border border-primary/20 group-hover:shadow-neon transition-all">
+                {image ? <CheckCircle className="text-emerald" size={32} /> : <Upload className="text-primary" size={32} />}
               </div>
-              <h4 className="text-xl font-bold mb-2">{image ? image.name : "Syllabus Image Drop Pannu"}</h4>
-              <p className="text-slate-500 text-sm font-medium">PNG, JPG, JPEG support. Photo edhuthaalum okay da!</p>
+              <h4 className="text-lg font-bold mb-2">{image ? image.name : "Syllabus Image Drop Pannu"}</h4>
+              <p className="text-slate-500 text-xs font-medium">PNG, JPG, JPEG support. Photo edhuthaalum okay da!</p>
             </div>
           </motion.div>
 
           <button 
             onClick={analyzeSyllabus}
             disabled={!b64 || isAnalyzing}
-            className="w-full neon-button py-5 text-lg disabled:bg-slate-200 disabled:shadow-none disabled:opacity-50"
+            className="w-full neon-button py-4 rounded-xl text-base disabled:bg-slate-200 disabled:shadow-none disabled:opacity-50"
           >
             {isAnalyzing ? (
               <span className="flex items-center justify-center gap-3">
@@ -86,7 +86,7 @@ export default function SyllabusAnalyzer() {
               </span>
             ) : (
               <span className="flex items-center justify-center gap-3">
-                <Zap size={22} fill="currentColor" className="text-white" /> INITIATE AI ANALYSIS
+                <Zap size={20} fill="currentColor" className="text-white" /> INITIATE AI ANALYSIS
               </span>
             )}
           </button>
@@ -150,11 +150,11 @@ export default function SyllabusAnalyzer() {
                          </div>
                        </div>
 
-                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-slate-250">
-                          <button className="flex items-center justify-center gap-3 bg-slate-100 border border-slate-200 hover:bg-primary hover:text-white transition-all py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-600 group">
+                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-slate-200">
+                          <button className="flex items-center justify-center gap-3 bg-slate-100 border border-slate-200 hover:bg-primary hover:text-white transition-all py-2.5 rounded-xl text-xs font-black uppercase tracking-widest text-slate-600 group">
                              <FileText size={16} /> <span>Get 2 Marks</span>
                           </button>
-                          <button className="flex items-center justify-center gap-3 bg-slate-100 border border-slate-200 hover:bg-secondary hover:text-white transition-all py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-600 group">
+                          <button className="flex items-center justify-center gap-3 bg-slate-100 border border-slate-200 hover:bg-secondary hover:text-white transition-all py-2.5 rounded-xl text-xs font-black uppercase tracking-widest text-slate-600 group">
                              <Sparkles size={16} /> <span>AI Guide 14M</span>
                           </button>
                        </div>

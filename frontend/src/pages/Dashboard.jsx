@@ -48,20 +48,20 @@ export default function Dashboard() {
         </div>
 
         <div className="max-w-3xl mx-auto relative group">
-          <form onSubmit={handleSearch} className="relative z-10 flex items-center bg-white border border-slate-200/80 rounded-3xl p-2 transition-all group-focus-within:border-primary/50 group-focus-within:shadow-neon shadow-lg shadow-slate-100">
+          <form onSubmit={handleSearch} className="relative z-10 flex items-center bg-white border border-slate-200/80 rounded-2xl p-1.5 transition-all group-focus-within:border-primary/50 group-focus-within:shadow-neon shadow-md shadow-slate-100">
             <div className="pl-6 text-slate-400">
-              <Search size={22} className="group-focus-within:text-primary transition-colors" />
+              <Search size={20} className="group-focus-within:text-primary transition-colors" />
             </div>
             <input 
               type="text" 
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search Subject ID or Title (e.g., CS3301)"
-              className="flex-1 bg-transparent border-none text-slate-800 px-6 py-4 outline-none text-lg font-bold placeholder-slate-400"
+              className="flex-1 bg-transparent border-none text-slate-800 px-5 py-3 outline-none text-base font-semibold placeholder-slate-400"
             />
             <button 
               type="submit"
-              className="bg-primary hover:bg-secondary text-white font-bold py-4 px-10 rounded-2xl transition-all active:scale-95 shadow-neon uppercase tracking-widest text-xs"
+              className="bg-primary hover:bg-secondary text-white font-bold py-3.5 px-8 rounded-xl transition-all active:scale-95 shadow-neon uppercase tracking-widest text-xs"
             >
               Scan Data
             </button>
@@ -74,7 +74,7 @@ export default function Dashboard() {
                 onClick={() => setSelectedDept(dept)}
                 className={`px-5 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all border
                   ${selectedDept === dept 
-                    ? 'bg-primary/10 border-primary/30 text-primary shadow-[0_0_15px_rgba(249,115,22,0.15)]' 
+                    ? 'bg-primary/10 border-primary/30 text-primary shadow-[0_0_15px_rgba(37,99,235,0.15)]' 
                     : 'bg-slate-100 border-slate-200/40 text-slate-500 hover:text-slate-900 hover:bg-slate-200'
                   }`}
               >
@@ -129,20 +129,20 @@ export default function Dashboard() {
                       </div>
                     </div>
 
-                    <h4 className="text-slate-800 text-lg font-bold mb-8 flex-1 group-hover:text-primary transition-colors pr-10">
+                    <h4 className="text-slate-800 text-base font-bold mb-6 flex-1 group-hover:text-primary transition-colors pr-8">
                       {subject.name}
                     </h4>
 
                     <div className="grid grid-cols-2 gap-4">
                       <a 
                         href={subject.syllabus} target="_blank" rel="noreferrer"
-                        className="flex items-center justify-center space-x-2 bg-slate-100 border border-slate-200 py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-500 hover:bg-primary hover:text-white hover:shadow-neon transition-all"
+                        className="flex items-center justify-center space-x-2 bg-slate-100 border border-slate-200 py-2.5 rounded-xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-primary hover:text-white hover:shadow-neon transition-all"
                       >
                         <Download size={14} /> <span>Syllabus</span>
                       </a>
                       <a 
                         href={subject.notes} target="_blank" rel="noreferrer"
-                        className="flex items-center justify-center space-x-2 bg-slate-100 border border-slate-200 py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-500 hover:bg-secondary hover:text-white hover:shadow-[0_0_15px_rgba(245,158,11,0.25)] transition-all"
+                        className="flex items-center justify-center space-x-2 bg-slate-100 border border-slate-200 py-2.5 rounded-xl text-[11px] font-black uppercase tracking-widest text-slate-500 hover:bg-secondary hover:text-white hover:shadow-[0_0_15px_rgba(2,132,199,0.2)] transition-all"
                       >
                         <Library size={14} /> <span>Get Notes</span>
                       </a>
