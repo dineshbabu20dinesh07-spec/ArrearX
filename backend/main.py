@@ -20,7 +20,7 @@ from database import chat_collection, client
 # Load Environment Variables
 load_dotenv()
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
 AI_MODEL_NAME = os.getenv("AI_MODEL", "gemini-1.5-flash")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
@@ -30,7 +30,7 @@ DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 if GOOGLE_API_KEY:
     genai.configure(api_key=GOOGLE_API_KEY)
 else:
-    print("WARNING: GOOGLE_API_KEY not found in .env!")
+    print("WARNING: GOOGLE_API_KEY or GEMINI_API_KEY not found in environment!")
 
 # Configure Groq
 if GROQ_API_KEY:
