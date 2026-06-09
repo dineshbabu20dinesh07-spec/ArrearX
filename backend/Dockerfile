@@ -25,5 +25,5 @@ COPY . .
 # Expose port (Render will override $PORT dynamically, but 8000 is default fallback)
 EXPOSE 8000
 
-# Start command (using uvicorn)
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Start command (using uvicorn, dynamically binding to $PORT if provided)
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
