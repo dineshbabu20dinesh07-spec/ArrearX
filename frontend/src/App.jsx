@@ -13,23 +13,23 @@ import SyllabusAnalyzer from './pages/SyllabusAnalyzer';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-black text-white font-sans selection:bg-primary/40 selection:text-white pb-20 md:pb-0 md:pl-28 cyber-grid">
+      <div className="min-h-screen bg-[#fafafa] text-slate-800 font-sans selection:bg-primary/20 selection:text-primary pb-20 md:pb-0 md:pl-28 cyber-grid">
         <SidebarMain />
         <div className="max-w-7xl mx-auto px-6 py-10">
           <header className="flex justify-between items-center mb-10">
             <div className="flex items-center space-x-3 group cursor-pointer">
-              <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center border border-primary/30 group-hover:border-primary/60 transition-all shadow-neon group-hover:shadow-[0_0_20px_rgba(99,102,241,0.5)]">
+              <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20 group-hover:border-primary/40 transition-all shadow-neon group-hover:shadow-[0_0_20px_rgba(249,115,22,0.2)]">
                 <Sparkles className="text-primary w-5 h-5 animate-pulse" />
               </div>
               <div>
                 <h1 className="text-2xl font-black tracking-tighter text-glow font-display">ALL<span className="text-primary">CLEAR</span></h1>
-                <p className="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold group-hover:text-primary/70 transition-colors">Engineering OS 2.0</p>
+                <p className="text-[10px] uppercase tracking-[0.4em] text-slate-500 font-bold group-hover:text-primary/70 transition-colors">Engineering OS 2.0</p>
               </div>
             </div>
             
             <div className="flex items-center space-x-4">
-              <button className="hidden md:flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-xl text-sm font-medium hover:bg-white/10 transition-all group">
-                <Settings size={16} className="text-gray-400 group-hover:rotate-45 transition-transform" />
+              <button className="hidden md:flex items-center space-x-2 bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-sm font-medium hover:bg-slate-200 transition-all group text-slate-700">
+                <Settings size={16} className="text-slate-500 group-hover:rotate-45 transition-transform" />
                 <span>Config</span>
               </button>
               <div className="w-10 h-10 rounded-full border-2 border-primary/40 p-0.5 shadow-neon">
@@ -77,12 +77,12 @@ function SidebarMain() {
   ];
 
   return (
-    <nav className="fixed bottom-0 w-full md:w-24 md:h-screen md:left-0 bg-[#0d0d12]/90 backdrop-blur-3xl border-t md:border-t-0 md:border-r border-white/10 flex md:flex-col justify-around md:justify-center items-center py-4 md:py-0 z-[100] shadow-[10px_0_30px_rgba(0,0,0,0.5)]">
+    <nav className="fixed bottom-0 w-full md:w-24 md:h-screen md:left-0 bg-white/95 backdrop-blur-3xl border-t md:border-t-0 md:border-r border-slate-200/60 flex md:flex-col justify-around md:justify-center items-center py-4 md:py-0 z-[100] shadow-[5px_0_30px_rgba(0,0,0,0.03)]">
       <div
         onClick={() => navigate('/')}
         className="md:absolute md:top-8 text-primary font-black text-3xl hidden md:block cursor-pointer select-none tracking-tighter font-display group"
       >
-        <span className="text-glow group-hover:text-white transition-colors">AC</span><span className="animate-pulse text-white">.</span>
+        <span className="text-glow group-hover:text-slate-900 transition-colors">AC</span><span className="animate-pulse text-primary">.</span>
       </div>
 
       <div className="flex md:flex-col space-x-6 md:space-x-0 md:space-y-10">
@@ -92,15 +92,15 @@ function SidebarMain() {
               onClick={() => navigate(path)}
               className={`relative flex items-center justify-center w-14 h-14 rounded-2xl transition-all duration-300
                 ${isActive(path)
-                  ? 'text-primary bg-primary/15 shadow-[0_0_20px_rgba(99,102,241,0.3)] border border-primary/20 scale-110'
-                  : 'text-gray-500 hover:text-primary hover:bg-white/5'
+                  ? 'text-primary bg-primary/10 shadow-[0_0_20px_rgba(249,115,22,0.15)] border border-primary/20 scale-110'
+                  : 'text-slate-400 hover:text-primary hover:bg-slate-100'
                 }`}
             >
               <Icon size={26} strokeWidth={isActive(path) ? 2.5 : 2} />
               {isActive(path) && (
                 <motion.span 
                   layoutId="activeIndicator"
-                  className="absolute -left-3 top-1/2 -translate-y-1/2 w-1.5 h-10 bg-primary rounded-full hidden md:block shadow-[0_0_15px_rgba(99,102,241,1)]" 
+                  className="absolute -left-3 top-1/2 -translate-y-1/2 w-1.5 h-10 bg-primary rounded-full hidden md:block shadow-[0_0_15px_rgba(249,115,22,0.6)]" 
                 />
               )}
             </button>

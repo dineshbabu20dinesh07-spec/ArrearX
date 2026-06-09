@@ -107,7 +107,7 @@ export default function StudyRoom() {
                     className="flex-1 flex flex-col gap-6 overflow-hidden"
                   >
                     {/* Search Bar HUD */}
-                    <div className="glass-card-advanced p-4 border-primary/20 bg-primary/5 shrink-0">
+                    <div className="glass-card-advanced p-4 border-slate-200 bg-slate-50 shrink-0">
                       <div className="flex gap-4">
                         <div className="flex-1 relative group">
                           <input 
@@ -116,23 +116,23 @@ export default function StudyRoom() {
                             onChange={(e) => setSearchTopic(e.target.value)}
                             onKeyDown={e => e.key === 'Enter' && searchAndEmbed()}
                             placeholder="Search topics to study... (e.g. Data Structures)"
-                            className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-primary/50 text-white font-bold transition-all text-sm group-hover:bg-black/60 shadow-inner"
+                            className="w-full bg-white border border-slate-200/80 rounded-2xl px-6 py-4 outline-none focus:border-primary/50 text-slate-800 font-bold transition-all text-sm group-hover:bg-slate-50 shadow-inner"
                           />
                           <button 
                             onClick={() => searchAndEmbed()}
                             disabled={isSearching}
                             className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary p-3 rounded-xl hover:scale-105 transition-all shadow-neon disabled:opacity-50"
                           >
-                            {isSearching ? <Loader2 className="animate-spin text-white" size={20} /> : <Search size={20} />}
+                            {isSearching ? <Loader2 className="animate-spin text-white" size={20} /> : <Search size={20} className="text-white" />}
                           </button>
                         </div>
                       </div>
                     </div>
 
                     {/* Full Grid Results */}
-                    <div className="flex-1 glass-card-advanced p-6 border-white/5 bg-black/40 overflow-hidden flex flex-col">
-                      <div className="flex items-center justify-between mb-4 border-b border-white/5 pb-4">
-                         <h5 className="text-[10px] font-display font-black uppercase tracking-widest text-gray-500 flex items-center gap-2">
+                    <div className="flex-1 glass-card-advanced p-6 border-slate-200/60 bg-white overflow-hidden flex flex-col shadow-inner">
+                      <div className="flex items-center justify-between mb-4 border-b border-slate-200 pb-4">
+                         <h5 className="text-[10px] font-display font-black uppercase tracking-widest text-slate-500 flex items-center gap-2">
                            <MonitorPlay size={14} className="text-primary" /> Available Lessons
                          </h5>
                          {searchResults.length > 0 && (
@@ -150,11 +150,11 @@ export default function StudyRoom() {
                                 whileHover={{ scale: 1.02, y: -5 }}
                                 key={idx}
                                 onClick={() => setActiveVideoId(video.id)}
-                                className="group relative flex flex-col rounded-3xl overflow-hidden border border-white/5 bg-white/[0.01] hover:border-primary/30 transition-all text-left"
+                                className="group relative flex flex-col rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 hover:border-primary/30 hover:bg-white transition-all text-left shadow-sm"
                               >
                                 <div className="relative aspect-video w-full overflow-hidden">
-                                  <img src={video.thumbnail} alt="thumb" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-500" />
-                                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                                  <img src={video.thumbnail} alt="thumb" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500" />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
                                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-neon">
                                       <Play size={20} className="text-white ml-1" fill="currentColor" />
@@ -165,10 +165,10 @@ export default function StudyRoom() {
                                   </div>
                                 </div>
                                 <div className="p-4">
-                                  <p className="text-[11px] font-bold text-white/90 line-clamp-2 group-hover:text-primary transition-colors mb-2">
+                                  <p className="text-[11px] font-bold text-slate-800 line-clamp-2 group-hover:text-primary transition-colors mb-2">
                                     {video.title}
                                   </p>
-                                  <p className="text-[9px] text-gray-500 font-black uppercase tracking-wider">{video.channel}</p>
+                                  <p className="text-[9px] text-slate-400 font-black uppercase tracking-wider">{video.channel}</p>
                                 </div>
                               </motion.button>
                             ))}
@@ -200,20 +200,20 @@ export default function StudyRoom() {
                       </button>
                       <button 
                         onClick={() => setIsFullScreen(true)}
-                        className="flex items-center gap-2 text-[10px] font-display font-black uppercase tracking-widest text-white/40 hover:text-white transition-colors"
+                        className="flex items-center gap-2 text-[10px] font-display font-black uppercase tracking-widest text-slate-400 hover:text-slate-800 transition-colors"
                       >
                         <Maximize2 size={16} /> Wide Mode
                       </button>
                     </div>
 
                     {/* Active Stream Player */}
-                    <div className="flex-1 glass-card-advanced relative overflow-hidden flex flex-col border-white/5 bg-black/40">
-                      <div className="p-4 bg-white/[0.02] border-b border-white/5 flex items-center justify-between">
+                    <div className="flex-1 glass-card-advanced relative overflow-hidden flex flex-col border-slate-200/60 bg-white">
+                      <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
                         <div className="flex items-center space-x-3">
                           <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center border border-primary/40">
                             <Zap className="text-primary" size={16} fill="currentColor" />
                           </div>
-                          <h3 className="font-display font-black text-[10px] uppercase tracking-[0.2em] text-white/50">Digital Stream Active</h3>
+                          <h3 className="font-display font-black text-[10px] uppercase tracking-[0.2em] text-slate-500">Digital Stream Active</h3>
                         </div>
                       </div>
 
@@ -234,24 +234,24 @@ export default function StudyRoom() {
 
             {/* Right Col: Advanced AI HUD Sidebar */}
             <div className="w-full xl:w-[420px] flex flex-col gap-6 shrink-0 h-full">
-              <div className="glass-card-advanced flex-1 flex flex-col overflow-hidden border-primary/20 bg-[#0a0a0f]/80 relative group">
+              <div className="glass-card-advanced flex-1 flex flex-col overflow-hidden border-slate-200 bg-white relative group shadow-lg">
                 {/* HUD Header */}
-                <div className="p-6 bg-gradient-to-br from-primary/15 via-transparent to-transparent border-b border-white/5 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[50px] -mr-16 -mt-16 animate-pulse"></div>
+                <div className="p-6 bg-gradient-to-br from-primary/5 via-transparent to-transparent border-b border-slate-200 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-[50px] -mr-16 -mt-16 animate-pulse"></div>
                   <div className="flex items-center justify-between relative z-10">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center border border-primary/30 shadow-neon">
                         <Bot className="text-primary" size={24} />
                       </div>
                       <div>
-                        <h4 className="font-display font-black tracking-tight text-white group-hover:text-primary transition-colors text-lg">ALLCLEAR AI</h4>
+                        <h4 className="font-display font-black tracking-tight text-slate-900 group-hover:text-primary transition-colors text-lg">ALLCLEAR AI</h4>
                         <div className="flex items-center text-[10px] text-emerald font-black uppercase tracking-[0.2em] mt-1">
                           <span className="w-2 h-2 bg-emerald rounded-full mr-2 shadow-[0_0_10px_rgba(16,185,129,0.8)] animate-pulse" /> SYNC_STABLE
                         </div>
                       </div>
                     </div>
                     <div className="flex flex-col items-end">
-                       <span className="text-[9px] font-black text-gray-500 uppercase tracking-widest mb-1">Buddy OS 4.0</span>
+                       <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Buddy OS 4.0</span>
                        <div className="flex gap-1">
                           {[1,2,3].map(i => <div key={i} className="w-1 h-3 bg-primary/20 rounded-full"></div>)}
                        </div>
@@ -260,7 +260,7 @@ export default function StudyRoom() {
                 </div>
 
                 {/* HUD Chat Feed */}
-                <div className="flex-1 p-6 overflow-y-auto space-y-6 custom-scrollbar bg-black/40 cyber-grid">
+                <div className="flex-1 p-6 overflow-y-auto space-y-6 custom-scrollbar bg-slate-50/50 cyber-grid">
                   <AnimatePresence>
                     {messages.map((m, i) => (
                       <motion.div 
@@ -273,7 +273,7 @@ export default function StudyRoom() {
                         <div className={`max-w-[85%] p-4 rounded-[1.5rem] text-[13px] font-medium leading-relaxed relative group/msg
                           ${m.role === 'user' 
                             ? 'bg-primary text-white rounded-br-none shadow-neon' 
-                            : 'bg-white/5 border border-white/10 text-gray-200 rounded-bl-none'
+                            : 'bg-white border border-slate-200 text-slate-800 rounded-bl-none shadow-sm'
                           }`}
                         >
                           {m.content}
@@ -286,9 +286,9 @@ export default function StudyRoom() {
                   </AnimatePresence>
                   {isTyping && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-start">
-                      <div className="bg-white/5 border border-white/10 p-5 rounded-2xl rounded-bl-none flex items-center space-x-3">
+                      <div className="bg-white border border-slate-200 p-5 rounded-2xl rounded-bl-none flex items-center space-x-3 shadow-sm">
                          <Loader2 className="animate-spin text-primary" size={16} />
-                         <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest animate-pulse">Processing Core...</span>
+                         <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest animate-pulse">Processing Core...</span>
                       </div>
                     </motion.div>
                   )}
@@ -296,20 +296,20 @@ export default function StudyRoom() {
                 </div>
 
                 {/* HUD Input Bar */}
-                <div className="p-6 bg-black/60 border-t border-white/5">
-                  <div className="flex items-center bg-[#11111a]/80 border border-white/10 rounded-2xl focus-within:border-primary/50 transition-all p-1.5 shadow-2xl">
+                <div className="p-6 bg-slate-50 border-t border-slate-200">
+                  <div className="flex items-center bg-white border border-slate-200 rounded-2xl focus-within:border-primary/50 transition-all p-1.5 shadow-md shadow-slate-100">
                     <input 
                       type="text" 
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
                       placeholder="Input Request to AllClear AI..." 
-                      className="flex-1 bg-transparent border-none text-white px-5 py-3 outline-none placeholder-gray-600 text-sm font-bold font-sans"
+                      className="flex-1 bg-transparent border-none text-slate-800 px-5 py-3 outline-none placeholder-slate-400 text-sm font-bold font-sans"
                     />
                     <button 
                       onClick={sendMessage}
                       disabled={!input.trim()}
-                      className="bg-primary hover:bg-secondary disabled:bg-gray-800 p-3 rounded-xl text-white transition-all transform active:scale-95 flex items-center justify-center shadow-neon"
+                      className="bg-primary hover:bg-secondary disabled:bg-gray-200 p-3 rounded-xl text-white transition-all transform active:scale-95 flex items-center justify-center shadow-neon"
                     >
                       <Send size={20} />
                     </button>

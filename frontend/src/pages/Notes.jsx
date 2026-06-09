@@ -93,16 +93,16 @@ export default function Notes() {
           <p className="text-gray-500 font-medium">Capture high-yield insights – Auto-save & PDF Export ready.</p>
         </div>
 
-        <div className="flex bg-white/5 p-1.5 rounded-2xl border border-white/5">
+        <div className="flex bg-slate-100 p-1.5 rounded-2xl border border-slate-200">
            <button 
              onClick={() => setViewMode('grid')}
-             className={`p-2 rounded-xl transition-all ${viewMode === 'grid' ? 'bg-secondary text-white shadow-neon-pink' : 'text-gray-500 hover:text-white'}`}
+             className={`p-2 rounded-xl transition-all ${viewMode === 'grid' ? 'bg-secondary text-white shadow-neon-pink' : 'text-slate-500 hover:text-slate-800'}`}
            >
              <LayoutGrid size={20} />
            </button>
            <button 
              onClick={() => setViewMode('list')}
-             className={`p-2 rounded-xl transition-all ${viewMode === 'list' ? 'bg-secondary text-white shadow-neon-pink' : 'text-gray-500 hover:text-white'}`}
+             className={`p-2 rounded-xl transition-all ${viewMode === 'list' ? 'bg-secondary text-white shadow-neon-pink' : 'text-slate-500 hover:text-slate-800'}`}
            >
              <List size={20} />
            </button>
@@ -123,7 +123,7 @@ export default function Notes() {
                     placeholder="SUBJECT CODE (e.g. CS3301)"
                     value={activeNote.subject}
                     onChange={e => setActiveNote({...activeNote, subject: e.target.value.toUpperCase()})}
-                    className="w-full bg-white/5 border border-white/5 rounded-2xl pl-12 pr-6 py-4 outline-none focus:border-secondary/40 text-white font-black uppercase tracking-widest text-xs transition-all"
+                    className="w-full bg-slate-100 border border-slate-200 rounded-2xl pl-12 pr-6 py-4 outline-none focus:border-secondary/40 text-slate-800 font-black uppercase tracking-widest text-xs transition-all"
                   />
                 </div>
                 <input 
@@ -131,7 +131,7 @@ export default function Notes() {
                   placeholder="Note Title..."
                   value={activeNote.title}
                   onChange={e => setActiveNote({...activeNote, title: e.target.value})}
-                  className="w-full bg-transparent border-none text-2xl font-black text-white outline-none placeholder-gray-700 tracking-tight"
+                  className="w-full bg-transparent border-none text-2xl font-black text-slate-800 outline-none placeholder-slate-400 tracking-tight"
                 />
              </div>
 
@@ -139,7 +139,7 @@ export default function Notes() {
                placeholder="Macha, Start writing your key points here... AI Friend buddy ready to help!"
                value={activeNote.content}
                onChange={e => setActiveNote({...activeNote, content: e.target.value})}
-               className="w-full h-64 bg-white/5 border border-white/5 rounded-3xl p-6 outline-none focus:border-secondary/30 text-gray-200 font-medium leading-relaxed resize-none custom-scrollbar mb-6"
+               className="w-full h-64 bg-slate-50 border border-slate-200 rounded-3xl p-6 outline-none focus:border-secondary/30 text-slate-700 font-medium leading-relaxed resize-none custom-scrollbar mb-6"
              />
 
              <button 
@@ -154,11 +154,11 @@ export default function Notes() {
              </button>
           </div>
           
-          <div className="glass-card p-6 border-white/5 bg-white/[0.02]">
-             <h5 className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 flex items-center gap-2">
+          <div className="glass-card p-6 border-slate-200/60 bg-slate-50">
+             <h5 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4 flex items-center gap-2">
                <Sparkles size={12} className="text-secondary" /> Auto-Sync Active
              </h5>
-             <p className="text-xs text-gray-400 font-medium leading-relaxed italic">
+             <p className="text-xs text-slate-600 font-medium leading-relaxed italic">
                "Macha, notes eduthu vechuko. Arrear clear panna idhu dhaan help pannum. Direct-ah PDF download panna library mode use pannu."
              </p>
           </div>
@@ -169,7 +169,7 @@ export default function Notes() {
            <AnimatePresence mode="popLayout">
              {notes.length === 0 ? (
                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card h-80 flex flex-col items-center justify-center grayscale opacity-30 cyber-grid">
-                  <FileText size={60} className="text-gray-600 mb-4" />
+                  <FileText size={60} className="text-slate-400 mb-4" />
                   <p className="font-black uppercase tracking-widest text-[10px]">Vault is currently empty</p>
                </motion.div>
              ) : (
@@ -184,7 +184,7 @@ export default function Notes() {
                      initial={{ opacity: 0, scale: 0.95 }}
                      animate={{ opacity: 1, scale: 1 }}
                      transition={{ delay: idx * 0.05 }}
-                     className="glass-card p-6 flex flex-col group hover:border-secondary/40 transition-all border-white/5 relative"
+                     className="glass-card p-6 flex flex-col group hover:border-secondary/40 transition-all border-slate-200/60 relative"
                    >
                      <div className="flex justify-between items-start mb-6">
                         <div className="flex items-center gap-3">
@@ -199,7 +199,7 @@ export default function Notes() {
                         <div className="relative">
                            <button 
                              onClick={() => setOpenMenuId(openMenuId === note.id ? null : note.id)}
-                             className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-gray-400 hover:text-white"
+                             className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 hover:bg-slate-200 transition-all text-slate-500 hover:text-slate-800"
                            >
                              <MoreVertical size={16} />
                            </button>
@@ -209,16 +209,16 @@ export default function Notes() {
                                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
                                  animate={{ opacity: 1, scale: 1, y: 0 }}
                                  exit={{ opacity: 0, scale: 0.9, y: 10 }}
-                                 className="absolute right-0 top-full mt-2 w-48 bg-[#11111a] border border-white/10 rounded-xl shadow-2xl py-2 z-50"
+                                 className="absolute right-0 top-full mt-2 w-48 bg-white border border-slate-200 rounded-xl shadow-2xl py-2 z-50"
                                >
-                                  <button onClick={() => { handleEdit(note); setOpenMenuId(null); }} className="w-full text-left px-4 py-2 hover:bg-white/5 text-sm text-gray-300 hover:text-white flex items-center gap-3">
+                                  <button onClick={() => { handleEdit(note); setOpenMenuId(null); }} className="w-full text-left px-4 py-2 hover:bg-slate-50 text-sm text-slate-700 hover:text-slate-950 flex items-center gap-3">
                                      <Edit2 size={14} className="text-secondary" /> Rewrite Note
                                   </button>
-                                  <button onClick={() => { downloadPDF(note); setOpenMenuId(null); }} className="w-full text-left px-4 py-2 hover:bg-white/5 text-sm text-gray-300 hover:text-white flex items-center gap-3">
+                                  <button onClick={() => { downloadPDF(note); setOpenMenuId(null); }} className="w-full text-left px-4 py-2 hover:bg-slate-50 text-sm text-slate-700 hover:text-slate-950 flex items-center gap-3">
                                      <Download size={14} className="text-primary" /> Download PDF
                                   </button>
-                                  <div className="border-t border-white/5 my-1"></div>
-                                  <button onClick={() => { handleDelete(note.id); setOpenMenuId(null); }} className="w-full text-left px-4 py-2 hover:bg-white/5 text-sm text-red-500 hover:text-red-400 flex items-center gap-3">
+                                  <div className="border-t border-slate-100 my-1"></div>
+                                  <button onClick={() => { handleDelete(note.id); setOpenMenuId(null); }} className="w-full text-left px-4 py-2 hover:bg-red-50 text-sm text-red-600 hover:text-red-700 flex items-center gap-3">
                                      <Trash2 size={14} /> Delete Archive
                                   </button>
                                </motion.div>
@@ -227,17 +227,17 @@ export default function Notes() {
                         </div>
                      </div>
 
-                     <p className="text-gray-500 text-sm font-medium line-clamp-3 mb-6 flex-1 italic leading-relaxed">
+                     <p className="text-slate-500 text-sm font-medium line-clamp-3 mb-6 flex-1 italic leading-relaxed">
                        {note.content}
                      </p>
                      
-                     <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                        <div className="flex items-center text-[10px] text-gray-500 font-black uppercase tracking-widest gap-2">
+                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                        <div className="flex items-center text-[10px] text-slate-400 font-black uppercase tracking-widest gap-2">
                            <Clock size={12} /> {new Date(note.created_at).toLocaleDateString()}
                         </div>
                         <div className="flex -space-x-2">
-                           <div className="w-6 h-6 rounded-full bg-emerald shadow-neon border-2 border-black" />
-                           <div className="w-6 h-6 rounded-full bg-primary border-2 border-black" />
+                           <div className="w-6 h-6 rounded-full bg-emerald shadow-neon border-2 border-white" />
+                           <div className="w-6 h-6 rounded-full bg-primary border-2 border-white" />
                         </div>
                      </div>
                    </motion.div>

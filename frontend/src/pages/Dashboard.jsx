@@ -44,12 +44,12 @@ export default function Dashboard() {
           >
             ALL<span className="text-primary italic">CLEAR:</span> The Subject Core.
           </motion.h2>
-          <p className="text-gray-500 font-medium italic">Precision Syllabus, Notes & Exam Guides for Regulation 2021 Warriors.</p>
+          <p className="text-slate-500 font-medium italic">Precision Syllabus, Notes & Exam Guides for Regulation 2021 Warriors.</p>
         </div>
 
         <div className="max-w-3xl mx-auto relative group">
-          <form onSubmit={handleSearch} className="relative z-10 flex items-center bg-[#11111a]/80 backdrop-blur-2xl border border-white/10 rounded-3xl p-2 transition-all group-focus-within:border-primary/50 group-focus-within:shadow-neon">
-            <div className="pl-6 text-gray-500">
+          <form onSubmit={handleSearch} className="relative z-10 flex items-center bg-white border border-slate-200/80 rounded-3xl p-2 transition-all group-focus-within:border-primary/50 group-focus-within:shadow-neon shadow-lg shadow-slate-100">
+            <div className="pl-6 text-slate-400">
               <Search size={22} className="group-focus-within:text-primary transition-colors" />
             </div>
             <input 
@@ -57,7 +57,7 @@ export default function Dashboard() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search Subject ID or Title (e.g., CS3301)"
-              className="flex-1 bg-transparent border-none text-white px-6 py-4 outline-none text-lg font-bold placeholder-gray-600"
+              className="flex-1 bg-transparent border-none text-slate-800 px-6 py-4 outline-none text-lg font-bold placeholder-slate-400"
             />
             <button 
               type="submit"
@@ -74,8 +74,8 @@ export default function Dashboard() {
                 onClick={() => setSelectedDept(dept)}
                 className={`px-5 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all border
                   ${selectedDept === dept 
-                    ? 'bg-primary/20 border-primary/50 text-primary shadow-[0_0_15px_rgba(99,102,241,0.2)]' 
-                    : 'bg-white/5 border-white/5 text-gray-500 hover:text-white hover:bg-white/10'
+                    ? 'bg-primary/10 border-primary/30 text-primary shadow-[0_0_15px_rgba(249,115,22,0.15)]' 
+                    : 'bg-slate-100 border-slate-200/40 text-slate-500 hover:text-slate-900 hover:bg-slate-200'
                   }`}
               >
                 {dept}
@@ -129,20 +129,20 @@ export default function Dashboard() {
                       </div>
                     </div>
 
-                    <h4 className="text-gray-200 text-lg font-bold mb-8 flex-1 group-hover:text-primary transition-colors pr-10">
+                    <h4 className="text-slate-800 text-lg font-bold mb-8 flex-1 group-hover:text-primary transition-colors pr-10">
                       {subject.name}
                     </h4>
 
                     <div className="grid grid-cols-2 gap-4">
                       <a 
                         href={subject.syllabus} target="_blank" rel="noreferrer"
-                        className="flex items-center justify-center space-x-2 bg-white/5 border border-white/5 py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-gray-400 hover:bg-primary hover:text-white hover:shadow-neon transition-all"
+                        className="flex items-center justify-center space-x-2 bg-slate-100 border border-slate-200 py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-500 hover:bg-primary hover:text-white hover:shadow-neon transition-all"
                       >
                         <Download size={14} /> <span>Syllabus</span>
                       </a>
                       <a 
                         href={subject.notes} target="_blank" rel="noreferrer"
-                        className="flex items-center justify-center space-x-2 bg-white/5 border border-white/5 py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-gray-400 hover:bg-secondary hover:text-white hover:shadow-[0_0_15px_rgba(217,70,239,0.3)] transition-all"
+                        className="flex items-center justify-center space-x-2 bg-slate-100 border border-slate-200 py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-500 hover:bg-secondary hover:text-white hover:shadow-[0_0_15px_rgba(245,158,11,0.25)] transition-all"
                       >
                         <Library size={14} /> <span>Get Notes</span>
                       </a>
@@ -153,18 +153,18 @@ export default function Dashboard() {
           ) : searched ? (
             <motion.div 
               initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-              className="glass-card p-12 text-center border-dashed border-white/20"
+              className="glass-card p-12 text-center border-dashed border-slate-300"
             >
-              <div className="w-20 h-20 bg-gray-900/50 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Compass size={40} className="text-gray-500 animate-spin-slow" />
+              <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Compass size={40} className="text-slate-400 animate-spin-slow" />
               </div>
               <h3 className="text-2xl font-black mb-4">Subject code not found!</h3>
-              <p className="text-gray-500 max-w-md mx-auto mb-8 font-medium">
-                Searching officially for <span className="text-white">"{query}"</span>. AI Friend buddy ready to explain it live.
+              <p className="text-slate-500 max-w-md mx-auto mb-8 font-medium">
+                Searching officially for <span className="text-slate-800 font-bold">"{query}"</span>. AI Friend buddy ready to explain it live.
               </p>
               <button 
                 onClick={() => handleSearch()}
-                className="bg-white/5 border border-white/10 px-8 py-3 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-white/10 transition-all"
+                className="bg-slate-100 border border-slate-200 px-8 py-3 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-200 text-slate-700 transition-all"
               >
                 Let AI Analyze Syllabus
               </button>

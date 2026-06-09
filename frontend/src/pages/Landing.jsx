@@ -25,7 +25,7 @@ export default function Landing() {
           className="inline-flex items-center space-x-2 px-6 py-2 rounded-full glass-card border-primary/20 mb-10 shadow-neon"
         >
           <Sparkles size={16} className="text-primary animate-pulse" />
-          <span className="text-xs font-black uppercase tracking-[0.3em] text-white/80">Next-Gen Engineering OS 2.0</span>
+          <span className="text-xs font-black uppercase tracking-[0.3em] text-slate-700">Next-Gen Engineering OS 2.0</span>
         </motion.div>
 
         <h1 className="text-5xl md:text-7xl font-black mb-12 leading-tight tracking-tighter drop-shadow-2xl font-display">
@@ -38,7 +38,7 @@ export default function Landing() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <button 
             onClick={() => navigate('/dashboard')}
-            className="neon-button min-w-[240px] text-xl py-5 group shadow-[0_0_40px_rgba(99,102,241,0.5)]"
+            className="neon-button min-w-[240px] text-xl py-5 group shadow-[0_0_40px_rgba(249,115,22,0.35)]"
           >
             <span className="flex items-center justify-center gap-3">
               INITIALIZE STUDY <ArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -46,7 +46,7 @@ export default function Landing() {
           </button>
           
           <button 
-            className="px-10 py-5 rounded-2xl glass-card border-white/10 hover:border-primary/40 transition-all font-bold uppercase tracking-widest text-sm hover:bg-primary/5 flex items-center gap-3 group"
+            className="px-10 py-5 rounded-2xl glass-card border-slate-200/80 hover:border-primary/40 transition-all font-bold uppercase tracking-widest text-sm hover:bg-primary/5 flex items-center gap-3 group text-slate-700"
           >
             <Binary size={18} className="text-primary group-hover:rotate-180 transition-transform duration-500" />
             Access Database
@@ -69,18 +69,18 @@ export default function Landing() {
             <Zap className="text-primary" size={30} fill="currentColor" />
           </div>
           <h3 className="text-2xl font-black mb-3 tracking-tight">Instant Subject Hub</h3>
-          <p className="text-gray-500 font-medium leading-relaxed">Integrated Subject Database. Get Syllabus & Notes in <span className="text-white">0.2 seconds.</span></p>
+          <p className="text-slate-500 font-medium leading-relaxed">Integrated Subject Database. Get Syllabus & Notes in <span className="text-slate-800 font-bold">0.2 seconds.</span></p>
         </div>
 
         <div className="glass-card p-10 group hover:border-secondary/50 transition-all hover:bg-secondary/5 relative overflow-hidden border-t-4 border-t-secondary">
           <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
             <Binary size={80} />
           </div>
-          <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 border border-secondary/20 shadow-[0_0_20px_rgba(217,70,239,0.3)]">
+          <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 border border-secondary/20 shadow-[0_0_20px_rgba(245,158,11,0.25)]">
             <Sparkles className="text-secondary" size={30} fill="currentColor" />
           </div>
           <h3 className="text-2xl font-black mb-3 tracking-tight">AI Buddy Mode</h3>
-          <p className="text-gray-500 font-medium leading-relaxed">No judgmental bots here. Talk to your college AI buddy in <span className="text-white">Tamil-English slang.</span></p>
+          <p className="text-slate-500 font-medium leading-relaxed">No judgmental bots here. Talk to your college AI buddy in <span className="text-slate-800 font-bold">Tamil-English slang.</span></p>
         </div>
 
         <div className="glass-card p-10 group hover:border-cyan/50 transition-all hover:bg-cyan/5 relative overflow-hidden">
@@ -91,7 +91,7 @@ export default function Landing() {
             <ShieldCheck className="text-cyan" size={30} fill="currentColor" />
           </div>
           <h3 className="text-2xl font-black mb-3 tracking-tight">Verified Data</h3>
-          <p className="text-gray-500 font-medium leading-relaxed">Official Regulation 2021 curriculum for all <span className="text-white">Professional Departments.</span></p>
+          <p className="text-slate-500 font-medium leading-relaxed">Official Regulation 2021 curriculum for all <span className="text-slate-800 font-bold">Professional Departments.</span></p>
         </div>
       </motion.div>
     </div>

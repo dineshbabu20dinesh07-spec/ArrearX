@@ -57,7 +57,7 @@ export default function SyllabusAnalyzer() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass-card p-8 border-2 border-dashed border-white/10 hover:border-primary/40 transition-all group relative overflow-hidden"
+            className="glass-card p-8 border-2 border-dashed border-slate-300 hover:border-primary/40 transition-all group relative overflow-hidden"
           >
             <input 
               type="file" 
@@ -71,31 +71,31 @@ export default function SyllabusAnalyzer() {
                 {image ? <CheckCircle className="text-emerald" size={40} /> : <Upload className="text-primary" size={40} />}
               </div>
               <h4 className="text-xl font-bold mb-2">{image ? image.name : "Syllabus Image Drop Pannu"}</h4>
-              <p className="text-gray-500 text-sm font-medium">PNG, JPG, JPEG support. Photo edhuthaalum okay da!</p>
+              <p className="text-slate-500 text-sm font-medium">PNG, JPG, JPEG support. Photo edhuthaalum okay da!</p>
             </div>
           </motion.div>
 
           <button 
             onClick={analyzeSyllabus}
             disabled={!b64 || isAnalyzing}
-            className="w-full neon-button py-5 text-lg disabled:bg-gray-800 disabled:shadow-none disabled:opacity-50"
+            className="w-full neon-button py-5 text-lg disabled:bg-slate-200 disabled:shadow-none disabled:opacity-50"
           >
             {isAnalyzing ? (
               <span className="flex items-center justify-center gap-3">
-                <Loader className="animate-spin" /> AI SCANNING...
+                <Loader className="animate-spin text-white" /> AI SCANNING...
               </span>
             ) : (
               <span className="flex items-center justify-center gap-3">
-                <Zap size={22} fill="currentColor" /> INITIATE AI ANALYSIS
+                <Zap size={22} fill="currentColor" className="text-white" /> INITIATE AI ANALYSIS
               </span>
             )}
           </button>
           
-          <div className="glass-card p-6 border-white/5 bg-white/[0.02]">
-             <h5 className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 mb-4 flex items-center gap-2">
+          <div className="glass-card p-6 border-slate-200/60 bg-slate-50">
+             <h5 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4 flex items-center gap-2">
                <Star size={12} className="text-primary fill-primary" /> Pro Tips for Accuracy
              </h5>
-             <ul className="space-y-3 text-xs text-gray-400 font-medium">
+             <ul className="space-y-3 text-xs text-slate-600 font-medium">
                <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 shrink-0" /> Photo clear-ah edunga macha.</li>
                <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 shrink-0" /> Focus on Unit Titles and Topics.</li>
                <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 shrink-0" /> Regulation 2017 or 2021 okay!</li>
@@ -109,21 +109,21 @@ export default function SyllabusAnalyzer() {
             {!result ? (
               <motion.div 
                 key="empty" initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-                className="glass-card h-[500px] flex flex-col items-center justify-center opacity-30 grayscale cyber-grid"
+                className="glass-card h-[500px] flex flex-col items-center justify-center opacity-30 grayscale cyber-grid bg-white"
               >
-                <ImageIcon size={60} className="text-gray-600 mb-4" />
+                <ImageIcon size={60} className="text-slate-400 mb-4" />
                 <p className="font-black uppercase tracking-widest text-xs">Waiting for Scan Data...</p>
               </motion.div>
             ) : result.error ? (
-              <motion.div key="error" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card p-10 border-red-500/20 text-center">
+              <motion.div key="error" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card p-10 border-red-200 text-center bg-white">
                 <AlertCircle className="text-red-500 mx-auto mb-4" size={48} />
                 <h4 className="text-xl font-bold mb-2">Sync Error</h4>
-                <p className="text-gray-500">{result.error}</p>
+                <p className="text-slate-600">{result.error}</p>
               </motion.div>
             ) : (
               <motion.div key="result" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
                 {result.units?.map((unit, idx) => (
-                  <div key={idx} className="glass-card p-8 group border-white/5 hover:border-primary/30 transition-all">
+                  <div key={idx} className="glass-card p-8 group border-slate-200/60 hover:border-primary/30 transition-all bg-white">
                     <div className="flex justify-between items-start mb-6">
                       <div className="bg-primary/20 p-2 rounded-lg border border-primary/30 text-primary font-black text-xs uppercase px-3">
                         Unit {unit.unit_number}
@@ -143,18 +143,18 @@ export default function SyllabusAnalyzer() {
                          </div>
                          <div className="flex flex-wrap gap-2">
                            {unit.topics?.map((t, i) => (
-                             <span key={i} className="text-xs bg-white/5 px-4 py-2 rounded-xl text-gray-300 font-bold border border-white/5 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all">
+                             <span key={i} className="text-xs bg-slate-100 px-4 py-2 rounded-xl text-slate-700 font-bold border border-slate-200 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all">
                                {t}
                              </span>
                            ))}
                          </div>
                        </div>
 
-                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-white/5">
-                          <button className="flex items-center justify-center gap-3 bg-white/5 hover:bg-primary hover:text-white transition-all py-3 rounded-2xl text-xs font-black uppercase tracking-widest group">
+                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-slate-250">
+                          <button className="flex items-center justify-center gap-3 bg-slate-100 border border-slate-200 hover:bg-primary hover:text-white transition-all py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-600 group">
                              <FileText size={16} /> <span>Get 2 Marks</span>
                           </button>
-                          <button className="flex items-center justify-center gap-3 bg-white/5 hover:bg-secondary hover:text-white transition-all py-3 rounded-2xl text-xs font-black uppercase tracking-widest group">
+                          <button className="flex items-center justify-center gap-3 bg-slate-100 border border-slate-200 hover:bg-secondary hover:text-white transition-all py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-600 group">
                              <Sparkles size={16} /> <span>AI Guide 14M</span>
                           </button>
                        </div>
